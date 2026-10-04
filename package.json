@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:site": "tsc -b && vite build --base=/solver/ && rm -rf ../personal-website/bustling-bar/public/solver && mkdir -p ../personal-website/bustling-bar/public/solver && cp -R dist/. ../personal-website/bustling-bar/public/solver/"
   },
   "dependencies": {
     "react": "^19.2.8",
